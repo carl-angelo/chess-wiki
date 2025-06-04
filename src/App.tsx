@@ -1,6 +1,6 @@
 import './App.scss'
 import AppRoute from './AppRoute';
-import AppProviders from './contexts/AppProviders';
+import AppProviders from './providers/AppProviders';
 
 const App = () => {
 

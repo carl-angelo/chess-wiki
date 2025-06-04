@@ -2,12 +2,12 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router';
 import { useGetPlayer } from '../services/api/useGetPlayer';
 import Grid from '@mui/joy/Grid';
-import Container from '@mui/joy/Container';
 import PlayerCard from '../components/PlayerCard';
 import Button from '@mui/joy/Button';
 import Typography from '@mui/joy/Typography';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import type { Player } from '../interfaces/Player';
+import ThemeWrapper from '../components/ThemeWrapper';
 
 const Profile: React.FC = () => {
 
@@ -45,7 +45,7 @@ const Profile: React.FC = () => {
   }, [data, getTimeSinceLastOnline]);
 
   return (
-    <Container>
+    <ThemeWrapper>
       <Grid container>
         <Grid xs={6}>
           <Button onClick={() => navigate('/')}> <KeyboardArrowLeftIcon /> Back</Button>
@@ -59,7 +59,7 @@ const Profile: React.FC = () => {
           <PlayerCard data={data} loading={isLoading} />
         </Grid>
       </Grid>
-    </Container>
+    </ThemeWrapper>
   );
 };
 

@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { CssVarsProvider } from '@mui/joy/styles';
 
 interface AppProvidersProps {
   children: React.ReactNode;
@@ -15,7 +16,9 @@ const AppProviders: React.FC<AppProvidersProps> = ({ children }) => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {children}
+      <CssVarsProvider >
+        {children}
+      </CssVarsProvider>
     </QueryClientProvider>
   );
 }

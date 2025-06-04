@@ -2,13 +2,13 @@ import React, {useState, useEffect} from 'react';
 import Table from '@mui/joy/Table';
 import { useGetGM } from '../services/api/useGetGM';
 import { useNavigate } from 'react-router';
-import Container from '@mui/joy/Container';
 import Grid from '@mui/joy/Grid';
 import Typography from '@mui/joy/Typography';
 import Input from '@mui/joy/Input';
 import Sheet from '@mui/joy/Sheet';
 import debounce from 'lodash/debounce';
 import Loading from '../components/Loading';
+import ThemeWrapper from '../components/ThemeWrapper';
 
 const List: React.FC = () => {
   const { data, isLoading } = useGetGM();
@@ -37,7 +37,7 @@ const List: React.FC = () => {
   }
 
   return (
-    <Container>
+    <ThemeWrapper>
       <Grid xs={12}>
         <Typography level='h2' textAlign='center' sx={{ marginBottom: 2 }}>
           Grandmasters List
@@ -66,7 +66,7 @@ const List: React.FC = () => {
           </Table>
         </Sheet>
       </Grid>
-    </Container>
+    </ThemeWrapper>
   );
 };
 export default List;
