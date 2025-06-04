@@ -24,7 +24,7 @@ const ThemeWrapper: React.FC<ThemeWrapperProps> = ({ children }) => {
         right: '8px',
       }}>
         <IconButton variant='outlined' onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}>
-          {mode === 'dark' ? <SunnyIcon /> : <BedtimeIcon />}
+          {mode === 'light' ? <SunnyIcon /> : <BedtimeIcon />}
         </IconButton>
       </Stack>
       {children}
